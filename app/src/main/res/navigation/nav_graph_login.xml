@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_kotlin"
+    app:startDestination="@id/emailPasswordFragment">
+
+    <fragment
+        android:id="@+id/emailPasswordFragment"
+        android:name="com.example.doglist.login.EmailPasswordFragment"
+        android:label="EmailPasswordFragment" >
+        <action
+            android:id="@+id/action_emailPasswordFragment_to_multiFactorFragment"
+            app:destination="@id/multiFactorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/multiFactorFragment"
+        android:name="com.example.doglist.login.MultiFactorFragment"
+        android:label="MultiFactorFragment" >
+        <action
+            android:id="@+id/action_multiFactorFragment_to_emailPasswordFragment"
+            app:destination="@id/emailPasswordFragment" />
+        <action
+            android:id="@+id/action_multiFactorFragment_to_multiFactorEnrollFragment"
+            app:destination="@id/multiFactorEnrollFragment" />
+        <action
+            android:id="@+id/action_multiFactorFragment_to_multiFactorSignInFragment"
+            app:destination="@id/multiFactorSignInFragment" />
+        <action
+            android:id="@+id/action_multiFactorFragment_to_multiFactorUnenrollFragment"
+            app:destination="@id/multiFactorUnenrollFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/multiFactorEnrollFragment"
+        android:name="com.example.doglist.login.MultiFactorEnrollFragment"
+        android:label="MultiFactorEnrollFragment" />
+    <fragment
+        android:id="@+id/multiFactorSignInFragment"
+        android:name="com.example.doglist.login.MultiFactorSignInFragment"
+        android:label="MultiFactorSignInFragment" />
+    <fragment
+        android:id="@+id/multiFactorUnenrollFragment"
+        android:name="com.example.doglist.login.MultiFactorUnenrollFragment"
+        android:label="MultiFactorUnenrollFragment" />
+
+</navigation>
